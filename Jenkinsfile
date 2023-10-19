@@ -12,7 +12,7 @@ pipeline{
     }
     stage ("Clone repo"){
       steps {
-        sh "git clone https://github.com/chernihou/devopsangular.git"
+        sh "git clone https://github.com/NouraneZouabi/tp4Devops"
       }
     }
     stage ("Generate backend image"){

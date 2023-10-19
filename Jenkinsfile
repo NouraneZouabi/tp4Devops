@@ -1,7 +1,7 @@
 pipeline{
   agent any 
   tools {
-    Maven 'maven'
+    maven 'Maven'
     nodejs 'node'
   }
   stages {
@@ -17,7 +17,7 @@ pipeline{
     }
     stage ("Generate backend image"){
       steps{
-        dir("devopsangular/springboot/app"){
+        dir("tp4Devops/springboot/app"){
           sh "mvn clean install"
           sh "docker build -t devopsangular ."
         }
@@ -25,7 +25,7 @@ pipeline{
     }
     stage ("Build Angular"){
   steps {
-    dir("devopsangular/angular-app"){ 
+    dir("tp4Devops/angular-app"){ 
        
         sh "docker build -t angular ."  
     }

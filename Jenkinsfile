@@ -12,8 +12,7 @@ pipeline{
     }
     stage ("Clone repo"){
       steps {
-                git branch: 'main', url: 'https://github.com/NouraneZouabi/tp4Devops'
-                sh "mvn -Dmaven.test.failure.ignore=true clean package"
+        sh "git clone https://github.com/NouraneZouabi/tp4Devops"
       }
     }
     stage ("Generate backend image"){

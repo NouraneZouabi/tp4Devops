@@ -18,7 +18,7 @@ pipeline{
     stage ("Generate backend image"){
       steps{
         dir("tp4Devops/springboot/app"){
-          sh "maven clean install"
+          sh "mvn clean install"
           sh "docker build -t devopsangular ."
         }
       }

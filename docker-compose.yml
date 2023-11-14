@@ -1,10 +1,10 @@
 services:
   angular:
-    image: angular
+    image: nouran10/angular:latest
     ports: 
       - "4200:80"
   spring-boot-app:
-    image: devopsangular
+    image: nouran10/devopsangular:1.0.0
     ports:
       - "8081:8081"
     environment:
@@ -28,5 +28,3 @@ services:
       - demo:/var/lib/mysql
 volumes:
     demo:
-
-

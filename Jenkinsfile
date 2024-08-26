@@ -19,7 +19,7 @@ pipeline{
       steps{
         dir("tp4Devops/springboot/app"){
           sh "mvn clean install"
-          sh "docker build -t devopsangular ."
+          sh "docker build -t springapp ."
         }
       }
     }
@@ -27,7 +27,7 @@ pipeline{
   steps {
     dir("tp4Devops/angular-app"){ 
        
-        sh "docker build -t angular ."  
+        sh "docker build -t angularapp ."  
     }
   }
 }
